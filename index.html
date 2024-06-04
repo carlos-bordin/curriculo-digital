@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale=1.00, maximum-scale=1.00, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/resetcss.css" />
+		<title>Currículo - Carlos Bordin</title>
+
+		<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+		<style>
+			body {
+				overflow-x: hidden;
+				font-size: 1rem;
+			}
+			@media (max-width: 1199px) {
+				#main {
+					width: 100%;
+				}
+				footer {
+					color: white;
+					padding: 128px 8px 24px 8px !important;
+					background-color: #161616;
+				}
+				.spikes {
+					position: relative;
+					background: white;
+					height: 100%;
+				}
+				.spikes::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					left: 0;
+					top: 100%;
+					z-index: 10;
+					display: block;
+					height: 100px;
+					background-size: 100px 100%;
+					background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+					background-position: 0 0;
+				}
+				#navegacao {
+					flex-grow: 1;
+				}
+				#navegacao .content {
+					display: flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+					height: 100%;
+					justify-content: center;
+					min-width: 30%;
+					margin: 32px 0;
+				}
+				#navegacao .content a {
+					background-color: rgb(255, 255, 255, 0.1);
+					border-radius: 1rem;
+					color: #fff;
+					font-size: 2rem;
+					justify-content: center;
+					margin: 8px 0;
+					padding: 12px 0;
+					text-align: center;
+					text-decoration: none;
+					transition: 0.4s;
+				}
+				#side-rodape {
+					color: gray;
+					display: flex;
+					justify-content: center;
+					text-align: center;
+				}
+				#sidebar {
+					background-color: #161616;
+					color: #fff;
+					display: flex;
+					flex-direction: column;
+					height: fit-content;
+					padding: 48px;
+					width: 100%;
+				}
+				*,
+				::before,
+				::after {
+					box-sizing: border-box;
+				}
+				.accordion-btn {
+					background-color: #1a1e25;
+					border: 1px solid #57606f;
+					color: #fff;
+					display: flex;
+					font-size: 1em;
+					justify-content: space-between;
+					padding: 24px;
+					text-decoration: none;
+					text-align: start;
+					transition: background-color 0.5s;
+				}
+				.accordion-btn:hover {
+					background-color: #3b424d;
+				}
+				.accordion-content {
+					border: 1px #000 solid;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height 0.8s ease;
+				}
+				.accordion-content section {
+					padding: 12px;
+				}
+				.accordion-content:target {
+					max-height: calc(1000px);
+				}
+				.bg-agm {
+					background-image: url(assets/img/agm.png);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 60%;
+				}
+				.bold-text,
+				strong {
+					font-weight: 700;
+				}
+				.card {
+					background-color: #161616;
+					border-radius: 8px;
+					box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.33);
+					color: #fff;
+					padding: 24px;
+				}
+				.card-list {
+					display: flex;
+					flex-direction: column;
+					gap: 2rem;
+					font-size: 1rem;
+				}
+				.card-book {
+					background-image: url(assets/img/books.png);
+					background-position: center right;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				.card-computer {
+					background-image: url(assets/img/computer.png);
+					background-position: center right;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				.contact-btn {
+					border: 0;
+					border-radius: 4px;
+					color: #fff;
+					background-color: #3bd45c;
+					font-size: 1rem;
+					padding: 16px 32px;
+				}
+				.conteudo {
+					padding: 2% 4%;
+					margin-top: 16px;
+				}
+				.conteudo p {
+					font-size: 1.15rem;
+					line-height: 1.2;
+				}
+				.conteudo .subtitulo-secao {
+					display: flex;
+					margin-bottom: 12px;
+					justify-content: center;
+					text-align: center;
+				}
+				.detalhes h1 {
+					font-size: 2.25rem;
+					margin-top: 16px;
+					text-align: center;
+				}
+				.detalhes h2 {
+					color: #3bd45c;
+					font-size: 2rem;
+					font-style: italic;
+					font-weight: 700;
+					margin-top: 8px;
+					text-align: center;
+				}
+				.foto img {
+					aspect-ratio: 1 / 1;
+					border: 4px #3bd45c solid;
+					border-radius: 50%;
+					object-fit: cover;
+					width: 100%;
+				}
+				.secao {
+					padding: 2rem 0;
+				}
+				.secao .titulo-secao {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+					justify-content: center;
+					text-align: center;
+				}
+				.side-header {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+				.side-header .foto {
+					display: flex;
+					justify-content: center;
+				}
+				.subtitulo-secao span {
+					font-size: 1.5rem;
+					font-weight: 700;
+				}
+				.titulo-secao span {
+					background-color: #3bd45c;
+					font-size: 2rem;
+					font-weight: 700;
+					padding: 4px 8px;
+				}
+				hr {
+					margin: 64px 0;
+				}
+				html {
+					font-family: Montserrat, sans-serif;
+					font-style: normal;
+					font-weight: 400;
+					letter-spacing: 0.5px;
+					text-align: justify;
+				}
+				i {
+					font-style: italic;
+				}
+				ol {
+					list-style-type: disc;
+					margin: 0 0 0 2rem;
+					text-align: start;
+				}
+				ol li,
+				ul li {
+					margin-top: 14px;
+					margin-bottom: 14px;
+				}
+				.contact-info {
+					text-decoration: none;
+					color: whitesmoke;
+					transition: 0.3s;
+				}
+				.contact-info:hover {
+					color: #3bd45c;
+					cursor: pointer;
+					text-decoration: underline;
+					transition: 0.3s;
+				}
+				.icon-list {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 24px;
+				}
+				.icon-img {
+					display: flex;
+					flex-direction: column;
+					flex: 1 0 15%;
+				}
+				.icon-img img {
+					margin: auto;
+					height: 40px;
+				}
+				.icon-img figcaption {
+					text-align: center;
+					font-size: 0.8rem;
+					margin: 8px auto auto auto;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				#main {
+					margin-left: 25%;
+					width: 75%;
+				}
+				#main .content {
+					padding: 48px;
+				}
+				footer {
+					color: white;
+					padding: 100px 48px 48px 48px;
+					background-color: #161616;
+				}
+				.spikes {
+					position: relative;
+					background: white;
+					height: 100%;
+				}
+				.spikes::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					left: 0;
+					top: 100%;
+					z-index: 10;
+					display: block;
+					height: 100px;
+					background-size: 100px 100%;
+					background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+					background-position: 0 0;
+				}
+				#navegacao {
+					flex-grow: 1;
+				}
+				#navegacao .content {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					justify-content: center;
+					min-width: 20%;
+					padding: 0 10%;
+				}
+				#navegacao div a {
+					box-shadow: inset 0 0 0 0 #3bd45c;
+					color: #fff;
+					display: flex;
+					font-size: 24px;
+					justify-content: center;
+					margin: 10px 0;
+					padding: 6px 12px;
+					text-align: center;
+					text-decoration: none;
+					transition: 0.4s;
+				}
+				#navegacao div a:hover {
+					box-shadow: inset 16em 0 0 0 #3bd45c;
+					cursor: pointer;
+					text-decoration: underline;
+					transition: 0.4s;
+				}
+				#side-rodape {
+					color: gray;
+					display: flex;
+					justify-content: center;
+					text-align: center;
+				}
+				#sidebar {
+					background-color: #161616;
+					color: #fff;
+					display: flex;
+					flex-direction: column;
+					height: calc(100vh);
+					padding: 48px;
+					position: fixed;
+					width: 25%;
+				}
+				*,
+				::before,
+				::after {
+					box-sizing: border-box;
+				}
+				.accordion-btn {
+					background-color: #1a1e25;
+					border: 1px solid #57606f;
+					color: #fff;
+					display: flex;
+					font-size: 1em;
+					justify-content: space-between;
+					padding: 24px;
+					text-decoration: none;
+					transition: background-color 0.5s;
+				}
+				.accordion-btn:hover {
+					background-color: #3b424d;
+				}
+				.accordion-content {
+					border: 1px #000 solid;
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height 0.8s ease;
+				}
+				.accordion-content section {
+					padding: 48px;
+				}
+				.accordion-content:target {
+					max-height: calc(900px);
+				}
+				.bg-agm {
+					background-image: url(assets/img/agm.png);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 60%;
+				}
+				.bold-text,
+				strong {
+					font-weight: 700;
+				}
+				.card {
+					background-color: #161616;
+					border-radius: 8px;
+					box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.33);
+					color: #fff;
+					padding: 24px;
+					width: 50%;
+				}
+				.card-list {
+					display: flex;
+					flex-direction: row;
+					row-gap: 2rem;
+					gap: 2rem;
+					font-size: 1.5rem;
+				}
+				.card-book {
+					background-image: url(assets/img/books.png);
+					background-position: center right;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				.card-computer {
+					background-image: url(assets/img/computer.png);
+					background-position: center right;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+				.contact-btn {
+					border: 0;
+					border-radius: 4px;
+					color: #fff;
+					background-color: #3bd45c;
+					font-size: larger;
+					padding: 16px 32px;
+				}
+				.conteudo {
+					font-size: 20px;
+					line-height: 1.2;
+					margin-left: 48px;
+					margin-top: 16px;
+				}
+				.conteudo .subtitulo-secao {
+					display: flex;
+					margin-bottom: 12px;
+				}
+				.detalhes h1 {
+					font-size: 48px;
+					margin-top: 8px;
+					text-align: center;
+				}
+				.detalhes h2 {
+					color: #3bd45c;
+					font-size: 24px;
+					font-style: italic;
+					font-weight: 700;
+					margin-top: 8px;
+					text-align: center;
+				}
+				.foto img {
+					aspect-ratio: 1 / 1;
+					border: 0.5em #3bd45c solid;
+					border-radius: 50%;
+					object-fit: cover;
+					width: 100%;
+				}
+				.secao .titulo-secao {
+					display: flex;
+					flex-direction: row;
+					width: 100%;
+				}
+				.side-header {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+				.side-header .foto {
+					display: flex;
+					justify-content: center;
+				}
+				.subtitulo-secao span {
+					font-size: 28px;
+					font-weight: 700;
+				}
+				.titulo-secao span {
+					background-color: #3bd45c;
+					font-size: 40px;
+					font-weight: 700;
+					padding: 4px 8px;
+				}
+				hr {
+					margin: 64px 0;
+				}
+				html {
+					font-family: Montserrat, sans-serif;
+					font-style: normal;
+					font-weight: 400;
+					letter-spacing: 0.5px;
+					text-align: justify;
+				}
+				i {
+					font-style: italic;
+				}
+				ol {
+					list-style-type: disc;
+					margin: 0 0 0 4rem;
+				}
+				ol li,
+				ul li {
+					margin-top: 20px;
+				}
+				.contact-info {
+					text-decoration: none;
+					color: whitesmoke;
+					transition: 0.3s;
+				}
+				.contact-info:hover {
+					color: #3bd45c;
+					cursor: pointer;
+					text-decoration: underline;
+					transition: 0.3s;
+				}
+				.icon-list {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 24px;
+				}
+				.icon-img {
+					display: flex;
+					flex-direction: column;
+					flex: 1 0 15%;
+				}
+				.icon-img img {
+					margin: auto;
+					height: 85px;
+				}
+				.icon-img figcaption {
+					text-align: center;
+					margin: 8px auto auto auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sidebar">
+			<div class="side-header">
+				<div class="foto">
+					<img src="assets/img/me-2.jpg" alt="Foto de Carlos Eduardo Bordin de Paula" />
+				</div>
+				<div class="detalhes">
+					<h1>CARLOS BORDIN</h1>
+					<h2>Aspirante a Programador Web</h2>
+				</div>
+			</div>
+			<div id="navegacao">
+				<div class="content">
+					<a href="#sobre-mim">> Sobre mim</a>
+					<a href="#experiencia">> Experiência</a>
+					<a href="#competencias">> Competências</a>
+					<a href="#contato">> Contato</a>
+				</div>
+			</div>
+			<div id="side-rodape">
+				<span>© Carlos Eduardo Bordin de Paula - 2024</span>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="content">
+				<div id="sobre-mim" class="secao">
+					<div class="titulo-secao">
+						<span>Sobre mim</span>
+					</div>
+					<div class="conteudo">
+						<div class="subtitulo-secao">
+							<span>> Meus objetivos</span>
+						</div>
+						<p>
+							Meu nome é
+							<strong>Carlos Eduardo Bordin de Paula</strong>, sou um aspirante a programador web e futuro engenheiro de software,
+							possuo diversas habilidades e muito interesse em trabalhar nas áreas mais complexas e delicadas de uma empresa, sempre
+							mantendo muita responsabilidade e autonomia esperada de um funcionário!
+						</p>
+						<p>
+							Dentre meus objetivos, eu viso adquirir mais habilidade e experiência nas diversas áreas que a informática abrange,
+							ampliando o meu repertório de conhecimentos e crescendo como técnico em informática.
+						</p>
+						<p>
+							Pessoalmente, tenho grande interesse na área de programação front-end,
+							<strong>mas não me limito a apenas isso!</strong> Qualquer e todo conhecimento é válido para mim, portanto, me contentaria
+							em trabalhar em qualquer setor.
+						</p>
+						<br />
+						<br />
+
+						<div class="subtitulo-secao">
+							<span>> Metodologia de aprendizagem</span>
+						</div>
+						<p>
+							Me identifico com o estilo de aprendizagem <strong>autodidata</strong>, desde pequeno sempre busquei conhecimento e
+							aprendizagem por conta própria, sempre me auto-incentivava à procura de respostas e soluções, foi assim que me tornei
+							fluente em inglês sem a necessidade de um professor, entretanto, atualmente estou cursando inglês na Escola de Idiomas
+							FISK com objetivo de obter meu
+							<a href="https://fisk.com.br/certificacoes#met" target="_blank">certificado de fluência em inglês MET</a>. Além disso,
+							sozinho aprendi a lógica de programação necessária para me adaptar mais rapidamente à linguagens como <i>JavaScript</i>,
+							<i>PHP</i>, <i>LUA</i> e futuramente muitas outras.
+						</p>
+						<br /><br />
+
+						<div class="subtitulo-secao">
+							<span>> Educação</span>
+						</div>
+						<div class="card-list">
+							<div class="card card-computer">
+								<span style="color: #3bd45c" class="bold-text">T.I Integrado | 2020 - 2023</span>
+								<br />
+								<span style="color: rgb(140, 140, 140)">C. E. Barão de Antonina (Rio Negro, Paraná)</span>
+								<br /><br />
+								<span
+									>Colégio no qual fiz meu ensino médio e adquiri meu certificado de Técnico em Informática, estudei sobre suporte e
+									conserto de computadores, lógica de programação e análise de projetos.</span
+								>
+							</div>
+							<div class="card card-book">
+								<span style="color: rgb(221, 42, 42)" class="bold-text">Fisk in Focus | 2023 - Atual</span>
+								<br />
+								<span style="color: rgb(140, 140, 140)">FISK Escola de Idiomas (Mafra, Santa Catarina)</span>
+								<br /><br />
+								<span
+									>Escola de idiomas na qual me matriculei em 2023 e estudo até o momento para adquirir meu certificado
+									internacional de fluência em inglês (MET).</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr />
+				<!-- OLHA A DIVISÃO FIUI -->
+				<div id="experiencia" class="secao">
+					<div class="titulo-secao">
+						<span>Experiência</span>
+					</div>
+					<div class="conteudo">
+						<div>
+							<p>Apesar de novo, já possuo um pouco de experiência prática, abaixo descrevo com detalhes.</p>
+							<br />
+							<div class="item">
+								<a href="#agm" class="accordion-btn"
+									>AGM Indústria e Comércio de Embalagens Plásticas
+									<i class="bi bi-caret-down-fill"></i>
+								</a>
+								<div id="agm" class="accordion-content">
+									<section class="bg-agm">
+										<p>Função: <strong>Assistente Administrativo e Técnico em Informática (Jovem Aprendiz)</strong></p>
+										<p>Tempo de duração: <strong>11/2021 - 05/2023 (um ano e meio)</strong></p>
+										<br />
+										<p>
+											Durante meu contrato com a AGM, eu adquiri diversas habilidades e as refinei em uma busca pela melhoria
+											contínua dos processos, além disso, também busquei construir um perfil de análise crítica.<br />
+											Também tive a oportunidade de ver, compreender e participar de um ambiente de trabalho profissional, no
+											qual me adaptei rapidamente, sempre me mantendo acima dos padrões como forma de demonstrar meu potencial
+											em
+											<strong>proatividade</strong>. <br /><br />Abaixo, listo de forma resumida minhas responsabilidades nesse
+											contrato.
+										</p>
+										<ol>
+											<li>
+												Manutenção e suporte de computadores em geral, além de analisar o ambiente a procura de melhorias.
+											</li>
+											<li>Controle de planilhas e utilização avançada do pacote office.</li>
+											<li>Solução de problemas técnicos e trabalho em equipe.</li>
+											<li>Manutenção e atualização do código dos sites da empresa.</li>
+											<li>Instalação de software e programas em geral.</li>
+											<li>Formatação e preparação de sistemas derivados de Windows e LINUX.</li>
+										</ol>
+									</section>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#expandindo" class="accordion-btn"
+									>[ . . . ]
+									<i class="bi bi-caret-down-fill accordion-caret"></i>
+								</a>
+								<div id="expandindo" class="accordion-content">
+									<section>
+										<p>
+											Ajude me a expandir essa seção
+											<i class="em em-wink" aria-role="presentation" aria-label="WINKING FACE"></i>
+										</p>
+										<br /><br />
+										<a href="#contato" class="contact-btn">Entrar em contato</a>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr />
+				<!-- OLHA A DIVISÃO FIUI -->
+				<div id="competencias" class="secao">
+					<div class="titulo-secao">
+						<span>Competências + Habilidades</span>
+					</div>
+					<div class="conteudo">
+						<div>
+							<p>
+								Ao longo dos anos, adquiri muitas habilidades e conhecimentos específicos algumas áreas, sempre mantendo meu
+								crescimento como pessoa e profissional constante.
+							</p>
+							<br />
+							<div class="item">
+								<a href="#soft-skills" class="accordion-btn"
+									>Soft Skills
+									<i class="bi bi-caret-down-fill accordion-caret"></i>
+								</a>
+								<div id="soft-skills" class="accordion-content">
+									<section>
+										Apesar de ser necessário possuir um conjunto de habilidades, técnicas e qualificações que sejam pertinentes
+										para certos cargos, não podemos esquecer de apresentar nossas habilidades <strong>interpessoais</strong> e
+										<strong>intrapessoais</strong>, não é? Portanto, aqui listo alguns aspectos da minha personalidade:
+										<br />
+										<ol>
+											<li>Facilidade de adaptação a ambientes novos</li>
+											<li>Comunicação efetiva com colegas</li>
+											<li>Análise crítica e procura de melhorias</li>
+											<li>Trabalho em equipe</li>
+											<li>Criatividade</li>
+											<li>Organização</li>
+											<li>Proatividade e capricho</li>
+										</ol>
+									</section>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#desenvolvimento-web" class="accordion-btn"
+									>Desenvolvimento WEB e Programação
+									<i class="bi bi-caret-down-fill accordion-caret"></i>
+								</a>
+								<div id="desenvolvimento-web" class="accordion-content">
+									<section>
+										Possuo certo nível de entendimento e prática sobre desenvolvimento web, incluindo também base de dados e
+										consultas em <em>MySqli</em>.
+										<br />
+										Nos próximos anos, estarei fazendo faculdade de Engenharia de Software, onde terei a oportunidade de aprimorar
+										ainda mais meus conhecimentos!
+										<br /><br />
+										<article class="icon-list">
+											<figure class="icon-img">
+												<img src="assets/img/html.png" alt="HTML 5" />
+												<figcaption>HTML 5</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/css3.png" alt="CSS 3" />
+												<figcaption>CSS 3</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/bootstrap.png" alt="Bootstrap 5.3" />
+												<figcaption>Bootstrap 5.3</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/php.svg" alt="PHP" />
+												<figcaption>PHP</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/javascript.png" alt="JavaScript" />
+												<figcaption>JavaScript</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/mysql.png" alt="MySqli" />
+												<figcaption>MySqli</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/lua.png" alt="LUA" />
+												<figcaption>LUA</figcaption>
+											</figure>
+										</article>
+										<br /><br />
+										<article>
+											<a href="https://carlos-bordin.github.io/operacao-natal/" target="_blank"
+												>Trabalho voluntário - Operação Natal (2021)</a
+											>
+										</article>
+									</section>
+								</div>
+							</div>
+							<div class="item">
+								<a href="#software" class="accordion-btn"
+									>Software e Informática
+									<i class="bi bi-caret-down-fill accordion-caret"></i>
+								</a>
+								<div id="software" class="accordion-content">
+									<section>
+										Possuo afinidade com assuntos relacionados a informática e computadores, tendo experiência com manutenção
+										preventiva e corretiva.
+										<br />
+										Além disso, sei como utilizar muitas ferramentas diferentes, como:
+										<br /><br />
+										<article class="icon-list">
+											<figure class="icon-img">
+												<img src="assets/img/word.svg" alt="Microsoft Word" />
+												<figcaption>Word</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/excel.png" alt="Microsoft Excel" />
+												<figcaption>Excel</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/powerpoint.png" alt="Microsoft Powerpoint" />
+												<figcaption>Word</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/filmora.png" alt="Wondershare Filmora" />
+												<figcaption>Filmora</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/premiere_pro.png" alt="Adobe Premiere Pro" />
+												<figcaption>Premiere Pro</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/photoshop.png" alt="Adobe Photoshop" />
+												<figcaption>Photoshop</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/canva.png" alt="Canva" />
+												<figcaption>Canva</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/vscode.webp" alt="Visual Studio Code" />
+												<figcaption>Visual Studio Code</figcaption>
+											</figure>
+										</article>
+										<br /><br /><br />
+										E Aqui estão alguns dos sistemas operacionais que sei utilizar:
+										<br /><br />
+										<article class="icon-list">
+											<figure class="icon-img">
+												<img src="assets/img/windows.png" alt="Microsoft Windows" />
+												<figcaption>Windows (7, 8, 10, 11)</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/linux.png" alt="Linux" />
+												<figcaption>LINUX</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/mint.webp" alt="Linux Mint" />
+												<figcaption>Linux Mint</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/bodhi.png" alt="Linux Bodhi" />
+												<figcaption>Linux Bodhi</figcaption>
+											</figure>
+											<figure class="icon-img">
+												<img src="assets/img/ubuntu.png" alt="Ubuntu" />
+												<figcaption>Ubuntu</figcaption>
+											</figure>
+										</article>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="spikes"></section>
+			<footer id="contato" class="secao">
+				<div class="titulo-secao">
+					<span>Contato + Links</span>
+				</div>
+				<div class="conteudo">
+					<div>
+						<ul>
+							<li>
+								<a href="https://wa.me/5547984715882" target="_blank" class="contact-info"
+									><i class="bi bi-whatsapp"></i> (47) 9 8471-5882</a
+								>
+							</li>
+							<li>
+								<a href="https://br.linkedin.com/in/carlos-bordin-93ba45253" target="_blank" class="contact-info"
+									><i class="bi bi-linkedin"></i> carlos-bordin-93ba45253</a
+								>
+							</li>
+							<li>
+								<a href="mailto:carlos.bordin.paula@gmail.com" target="_blank" class="contact-info"
+									><i class="bi bi-envelope-at"></i> carlos.bordin.paula@gmail.com</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.google.com/maps/place/Rio+Negro,+State+of+Paran%C3%A1,+83880-000/@-26.0924087,-49.825701,13z/data=!3m1!4b1!4m6!3m5!1s0x94dd93a73410fdb7:0x1e5885ca04a991e0!8m2!3d-26.0874162!4d-49.7809498!16s%2Fm%2F09rxg4s?entry=ttu"
+									target="_blank"
+									class="contact-info"
+									><i class="bi bi-geo-alt"></i> Rio Negro - PR, 83880-000</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
