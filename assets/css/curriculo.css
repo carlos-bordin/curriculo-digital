@@ -2,6 +2,9 @@
 html {
 	text-align: justify;
 }
+body {
+	background-color: white;
+}
 .vr {
 	display: inline-block;
 	align-self: stretch;
