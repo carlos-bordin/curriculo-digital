@@ -209,17 +209,11 @@ ul li {
 #contato .conteudo {
 	justify-content: center;
 }
-#contato .contact-options {
-	width: 49%;
-}
-#contato .download {
-	width: 49%;
-}
 
 /* Desktop */
 #main {
-	margin-left: 26%;
-	width: 74%;
+	margin-left: 27.64%;
+	width: 72.36%;
 }
 #main .content {
 	padding: 1.5em;
@@ -253,7 +247,7 @@ footer {
 	height: calc(100vh);
 	padding: 2.5vh;
 	position: fixed;
-	width: 26%;
+	width: 27.64%;
 	justify-content: space-between;
 }
 .accordion-btn {
