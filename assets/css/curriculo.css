@@ -2,9 +2,11 @@
 html {
 	text-align: justify;
 }
+
 body {
-	background-color: white;
+	background-color: #f5f5f5;
 }
+
 .vr {
 	display: inline-block;
 	align-self: stretch;
@@ -14,35 +16,41 @@ body {
 	background-color: currentcolor;
 	opacity: 0.25;
 }
+
 footer {
 	color: white;
 	background-color: #161616;
 }
-.spikes {
-	position: relative;
-	background: white;
-	height: 100%;
-}
-.spikes::after {
-	content: '';
+
+.custom-shape-divider-top-1721046433::after {
 	position: absolute;
-	right: 0;
+	top: 0;
 	left: 0;
-	top: 100%;
-	z-index: 10;
-	display: block;
-	height: 5em;
-	background-size: 5em 100%;
-	background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
-	background-position: 0 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
 }
+
+.custom-shape-divider-top-1721046433 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 56px;
+}
+
+.custom-shape-divider-top-1721046433 .shape-fill {
+	fill: #f5f5f5;
+}
+
 hr {
 	margin: 4em 0;
 }
+
 ol {
 	list-style-type: disc;
 	margin: 0 0 0 2em;
 }
+
 ol li,
 ul li {
 	margin-top: 1em;
@@ -52,16 +60,19 @@ ul li {
 	background-color: #161616;
 	color: #fff;
 }
+
 .side-header .foto {
 	display: flex;
 	justify-content: center;
 }
+
 .foto img {
 	border: 0.25vw #3bd45c solid;
 	border-radius: 50%;
 	object-fit: cover;
 	aspect-ratio: 1/1;
 }
+
 .detalhes h1 {
 	text-align: center;
 	text-overflow: ellipsis;
@@ -69,6 +80,7 @@ ul li {
 	white-space: wrap;
 	font-size: 4vh;
 }
+
 .detalhes h2 {
 	color: #3bd45c;
 	font-style: italic;
@@ -79,6 +91,7 @@ ul li {
 	white-space: wrap;
 	font-size: 2.5vh;
 }
+
 #navegacao div a {
 	box-shadow: inset 0 0 0 0 #3bd45c;
 	color: #fff;
@@ -87,12 +100,14 @@ ul li {
 	text-decoration: none;
 	transition: 0.4s;
 }
+
 #navegacao div a:hover {
 	box-shadow: inset 25vw 0 0 0 #3bd45c;
 	cursor: pointer;
 	text-decoration: underline;
 	transition: 0.4s;
 }
+
 #side-rodape {
 	color: gray;
 	text-align: center;
@@ -105,42 +120,51 @@ ul li {
 	font-weight: bold;
 	padding: 0.25em 0.5em;
 }
+
 .subtitulo-secao span {
 	font-size: 1.5em;
 	font-weight: bold;
 	text-align: left;
 }
+
 .card {
 	background-color: #161616;
 	border-radius: 8px;
 	box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.33);
 	color: #fff;
 }
+
 .card-text {
 	font-size: 0.8em;
 }
+
 .card-title {
 	font-size: 1em;
 	font-weight: bold;
 }
+
 .card-subtitle {
 	font-size: 0.9em;
 }
+
 .card-list {
 	font-size: 1.25rem;
 }
+
 .card-book {
 	background-image: url(../img/books.png);
 	background-position: center right;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: auto 50%;
 }
+
 .card-computer {
 	background-image: url(../img/computer.png);
 	background-position: center right;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: auto 50%;
 }
+
 .accordion-btn {
 	background-color: #1a1e25;
 	border: 1px solid #57606f;
@@ -152,24 +176,30 @@ ul li {
 	text-decoration: none;
 	transition: background-color 0.5s;
 }
+
 .accordion-btn:hover {
 	background-color: #3b424d;
 }
+
 .accordion-content {
 	border: 1px #000 solid;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.8s ease;
 }
+
 .accordion-content:target {
 	max-height: calc(200vh);
+	background-color: white;
 }
+
 .bg-agm {
 	background-image: url(../img/agm.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 60%;
 }
+
 .contact-btn {
 	border: 0;
 	border-radius: 0.5em;
@@ -178,34 +208,41 @@ ul li {
 	font-size: 1.5em;
 	text-decoration: none;
 }
+
 .contact-info {
 	text-decoration: none;
 	color: whitesmoke;
 	transition: 0.3s;
 }
+
 .contact-info:hover {
 	color: #3bd45c;
 	cursor: pointer;
 	text-decoration: underline;
 	transition: 0.3s;
 }
+
 .icon-list {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .icon-img {
 	display: flex;
 	flex-direction: column;
-	flex: 1 0 10%;
+	flex: 1 0 15%;
 }
+
 .icon-img img {
 	margin: auto;
-	height: 5em;
+	height: 3.5em;
 }
+
 .icon-img figcaption {
 	text-align: center;
 	margin: 0.5em auto auto auto;
 }
+
 #contato .conteudo {
 	justify-content: center;
 }
@@ -215,12 +252,15 @@ ul li {
 	margin-left: 27.64%;
 	width: 72.36%;
 }
+
 #main .content {
 	padding: 1.5em;
 }
-footer {
-	padding: 5em 2em 2em 2em;
+
+footer .footer-content {
+	padding: 2em 2em 2em 2em;
 }
+
 #navegacao .content {
 	display: flex;
 	flex-direction: column;
@@ -229,6 +269,7 @@ footer {
 	min-width: 20%;
 	padding: 0;
 }
+
 #navegacao div a {
 	display: flex;
 	font-size: 2.5vh;
@@ -236,11 +277,13 @@ footer {
 	margin: 0.5vh 0;
 	padding: 0.5vh 0.25em;
 }
+
 #side-rodape {
 	display: flex;
 	justify-content: center;
 	font-size: 1.75vh;
 }
+
 #sidebar {
 	display: flex;
 	flex-direction: column;
@@ -250,6 +293,7 @@ footer {
 	width: 27.64%;
 	justify-content: space-between;
 }
+
 .accordion-btn {
 	display: flex;
 	font-size: 1em;
@@ -257,125 +301,138 @@ footer {
 	padding: 1em;
 	text-decoration: none;
 }
+
 .accordion-content {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.8s ease;
 }
+
 .accordion-content section {
 	padding: 2.5em;
 }
+
 .accordion-content:target {
 	max-height: calc(900px);
 }
+
 .card {
 	border-radius: 8px;
 	padding: 1.25em;
 	width: 50%;
 }
+
 .card-text {
 	font-size: 0.8em;
 }
+
 .card-title {
 	font-size: 1em;
 }
+
 .card-subtitle {
 	font-size: 0.9em;
 }
+
 .card-list {
 	display: flex;
 	flex-direction: row;
 	column-gap: 2rem;
 	font-size: 1.25rem;
 }
+
 .contact-btn {
 	border-radius: 0.5em;
 	font-size: 1.5em;
 	padding: 0.5em 1em;
 }
+
 .conteudo {
 	font-size: 1.1em;
 	line-height: 1.25em;
 	margin-left: 2em;
 	margin-top: 1em;
 }
+
 .conteudo .subtitulo-secao {
 	display: flex;
 	margin-bottom: 0.75em;
 }
+
 .detalhes h1 {
 	margin-top: 0.5vh;
 	font-size: 4vh;
 }
+
 .detalhes h2 {
 	font-style: italic;
 	font-size: 2.5vh;
 }
+
 .foto {
 	margin: 0 1vw;
 }
+
 .foto img {
 	border-radius: 50%;
 	object-fit: cover;
 	aspect-ratio: 1/1;
 }
+
 .secao .titulo-secao {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	text-align: center;
 }
+
 .side-header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
+
 .side-header .foto {
 	display: flex;
 	justify-content: center;
 }
+
 .subtitulo-secao span {
 	font-size: 1.5em;
 	font-weight: 700;
 }
+
 .titulo-secao span {
 	font-size: 2em;
 	font-weight: 700;
 	padding: 0.25em 0.5em;
 }
+
 hr {
 	margin: 4em 0;
 }
+
 html {
 	letter-spacing: 0.05em;
 	text-align: justify;
 }
+
 ol {
 	list-style-type: disc;
 	margin: 0 0 0 2em;
 }
+
 ol li,
 ul li {
 	margin-top: 1em;
 }
+
 .icon-list {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2em;
 }
-.icon-img {
-	display: flex;
-	flex-direction: column;
-	flex: 1 0 15%;
-}
-.icon-img img {
-	margin: auto;
-	height: 5em;
-}
-.icon-img figcaption {
-	text-align: center;
-	margin: 0.5em auto auto auto;
-}
+
 #contato .conteudo {
 	justify-content: center;
 }
@@ -389,21 +446,25 @@ ul li {
 }
 
 /* Mobile */
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1080px) {
 	html {
 		text-align: justify;
 		font-size: 0.85rem;
 	}
+
 	#main {
 		margin-left: 0;
 		width: 100%;
 	}
+
 	#main .content {
 		padding: 1.25em;
 	}
-	footer {
-		padding: 5em 2em 2em 2em;
+
+	footer .footer-content {
+		padding: 2em;
 	}
+
 	#navegacao .content {
 		display: flex;
 		flex-direction: column;
@@ -412,6 +473,7 @@ ul li {
 		min-width: 20%;
 		padding: 0;
 	}
+
 	#navegacao div a {
 		display: flex;
 		font-size: 2.5vh;
@@ -419,11 +481,13 @@ ul li {
 		margin: 0.5vh 0;
 		padding: 0.5vh 0.25em;
 	}
+
 	#side-rodape {
 		display: flex;
 		justify-content: center;
 		font-size: 1.75vh;
 	}
+
 	#sidebar {
 		display: flex;
 		flex-direction: column;
@@ -433,6 +497,7 @@ ul li {
 		width: 100%;
 		justify-content: space-between;
 	}
+
 	.accordion-btn {
 		display: flex;
 		font-size: 1em;
@@ -440,124 +505,169 @@ ul li {
 		padding: 1em;
 		text-decoration: none;
 	}
+
 	.accordion-content {
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.8s ease;
+		background-color: white;
 	}
+
 	.accordion-content section {
 		padding: 1em;
 	}
+
 	.accordion-content:target {
 		max-height: calc(900px);
 	}
+
 	.card {
 		border-radius: 8px;
 		padding: 1em;
 		width: 100%;
 	}
+
 	.card-text {
 		font-size: 0.8em;
 	}
+
 	.card-title {
 		font-size: 1em;
 	}
+
 	.card-subtitle {
 		font-size: 0.9em;
 	}
+
 	.card-list {
 		display: flex;
 		flex-direction: column;
 		font-size: 1.25rem;
 		row-gap: 1em;
 	}
+
 	.contact-btn {
 		border-radius: 0.5em;
 		font-size: 1.5em;
 		padding: 0.5em 1em;
 	}
+
 	.conteudo {
 		font-size: 1.1em;
 		line-height: 1.25em;
 		margin-top: 1em;
 		margin-left: 0;
 	}
+
 	.conteudo .subtitulo-secao {
 		display: flex;
 		margin-bottom: 0.75em;
 	}
+
 	.detalhes h1 {
 		margin-top: 0.5vh;
 		font-size: 4vh;
 	}
+
 	.detalhes h2 {
 		font-style: italic;
 		font-size: 2.5vh;
 	}
+
 	.foto {
 		margin: 0 1vw;
 		max-height: 60vh;
 		aspect-ratio: 1/1;
 	}
+
 	.foto img {
 		border-radius: 50%;
 		object-fit: cover;
 		aspect-ratio: 1/1;
 	}
+
+	#navegacao div a {
+		box-shadow: inset 0 0 0 0 #3bd45c;
+		color: #fff;
+		font-size: 2.5vh;
+		text-align: center;
+		text-decoration: none;
+		transition: 0.4s;
+	}
+
+	#navegacao div a:hover {
+		box-shadow: inset 0 6vh 0 0 #3bd45c;
+		cursor: pointer;
+		text-decoration: underline;
+		transition: 0.4s;
+	}
+
 	.secao .titulo-secao {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		justify-content: center;
 	}
+
 	.side-header {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
+
 	.side-header .foto {
 		display: flex;
 		justify-content: center;
 	}
+
 	.subtitulo-secao span {
 		font-size: 1.5em;
 		font-weight: bold;
 	}
+
 	.titulo-secao span {
 		font-size: 2em;
 		font-weight: bold;
 		padding: 0.25em 0.5em;
 	}
+
 	hr {
 		margin: 4em 0;
 	}
+
 	ol {
 		list-style-type: disc;
 		margin: 0 0 0 0;
 	}
+
 	ol li,
 	ul li {
 		margin-top: 1em;
 	}
+
 	.icon-list {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5em;
 	}
+
 	.icon-img {
 		display: flex;
 		flex-direction: column;
 		flex: 1 0 20%;
 	}
+
 	.icon-img img {
 		margin: auto;
 		height: 3.5em;
 	}
+
 	.icon-img figcaption {
 		text-align: center;
 		margin: 0.5em auto auto auto;
 		font-size: 0.75em;
 	}
+
 	#contato .conteudo {
 		justify-content: center;
 		display: flex;
@@ -573,6 +683,7 @@ ul li {
 		margin-top: 2em;
 		text-align: center;
 	}
+
 	.vr {
 		display: none;
 	}
