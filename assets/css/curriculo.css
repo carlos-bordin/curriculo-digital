@@ -200,6 +200,13 @@ ul li {
 	background-size: 60%;
 }
 
+.bg-bat {
+	background-image: url(../img/Bat_brazil_logo.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+}
+
 .contact-btn {
 	border: 0;
 	border-radius: 0.5em;
