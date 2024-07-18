@@ -149,20 +149,33 @@ ul li {
 
 .card-list {
 	font-size: 1.25rem;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .card-book {
 	background-image: url(../img/books.png);
 	background-position: center right;
 	background-repeat: no-repeat;
-	background-size: auto 50%;
+	background-size: auto 60%;
+	flex-basis: 2;
+	flex-grow: 1;
 }
 
 .card-computer {
 	background-image: url(../img/computer.png);
 	background-position: center right;
 	background-repeat: no-repeat;
-	background-size: auto 50%;
+	background-size: auto 60%;
+	flex-basis: 1;
+}
+
+.card-adm {
+	background-image: url(../img/adm.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: auto 60%;
+	flex-basis: 1;
 }
 
 .accordion-btn {
@@ -326,7 +339,8 @@ footer .footer-content {
 .card {
 	border-radius: 8px;
 	padding: 1.25em;
-	width: 50%;
+	width: 100%;
+	flex: 1 0 40%;
 }
 
 .card-text {
@@ -344,7 +358,9 @@ footer .footer-content {
 .card-list {
 	display: flex;
 	flex-direction: row;
-	column-gap: 2rem;
+
+	column-gap: 1rem;
+	row-gap: 1rem;
 	font-size: 1.25rem;
 }
 
